@@ -1,0 +1,14 @@
+{
+  "id": "bhoomi-arunan/ekstep-marathi-bodhan-smoke-test",
+  "title": "EkStep Marathi Bodhan Smoke Test",
+  "code_file": "run_bodhan_smoke_test.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": false,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

@@ -1,0 +1,22 @@
+secrets/
+secrets/hf_token.txt
+
+# Conda / Python environment
+.conda/
+__pycache__/
+*.pyc
+
+# Logs
+debug_output.log
+*.log
+
+# Large artifacts: model weights, checkpoints, datasets, generated audio, caches
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+checkpoints/
+*.wav
+*.flac
+.cache/
