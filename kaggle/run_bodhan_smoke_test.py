@@ -206,17 +206,34 @@ def install_dependencies() -> bool:
     return True  # Continue even if some packages fail
 
 
+def _try_kaggle_secret(secret_name: str) -> Optional[str]:
+    """Attempt to read a secret from Kaggle Secrets. Returns None if unavailable (e.g. local execution)."""
+    try:
+        from kaggle_secrets import UserSecretsClient
+        user_secrets = UserSecretsClient()
+        value = user_secrets.get_secret(secret_name)
+        return value if value else None
+    except Exception:
+        # kaggle_secrets not installed, no internet/secrets attached, or secret not set.
+        return None
+
+
 def resolve_hf_token(hf_token_file_arg: Optional[str] = None) -> Optional[str]:
     """
     Resolve the Hugging Face token using the following priority:
-      1. HF_TOKEN environment variable
-      2. --hf-token-file CLI argument (path to a runtime-mounted token file)
-      3. HF_TOKEN_FILE environment variable (path to a runtime-mounted token file)
-      4. Local development fallback: secrets/hf_token.txt (never present on Kaggle)
+      1. Kaggle Secret "HF_TOKEN" (via kaggle_secrets.UserSecretsClient, if available)
+      2. HF_TOKEN environment variable
+      3. --hf-token-file CLI argument (path to a runtime-mounted token file)
+      4. HF_TOKEN_FILE environment variable (path to a runtime-mounted token file)
+      5. Local development fallback: secrets/hf_token.txt (never present on Kaggle)
 
     Returns the token string, or None if no source was found.
     Never logs the token value itself.
     """
+    kaggle_secret_token = _try_kaggle_secret("HF_TOKEN")
+    if kaggle_secret_token:
+        return kaggle_secret_token
+
     env_token = os.getenv("HF_TOKEN")
     if env_token:
         return env_token

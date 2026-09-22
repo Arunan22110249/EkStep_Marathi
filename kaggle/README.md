@@ -108,26 +108,29 @@ Visit the URL shown in the output to confirm the kernel appears on Kaggle.
 4. Select **"GPU"** (P100 or higher recommended)
 5. Click **"Save"**
 
-#### 3.2 Provide the Hugging Face Token (No Kaggle Secrets)
+#### 3.2 Provide the Hugging Face Token
 
-This runner does **not** use Kaggle Secrets. Instead, authentication is resolved at
-runtime in this priority order:
+Authentication is resolved at runtime in this priority order:
 
-1. **`HF_TOKEN` environment variable** — set directly in the Kaggle runtime
+1. **Kaggle Secret `HF_TOKEN`** — if the `kaggle_secrets` package is available
+   (i.e. running inside a Kaggle kernel) and a secret named `HF_TOKEN` has been
+   attached to the kernel, it is read via `UserSecretsClient().get_secret("HF_TOKEN")`.
+   Add it via kernel **"Add-ons" → "Secrets"** in the Kaggle editor.
+2. **`HF_TOKEN` environment variable** — set directly in the Kaggle runtime
    environment (e.g. via a startup script or notebook cell that exports it
    before running `run_bodhan_smoke_test.py`).
-2. **`HF_TOKEN_FILE` environment variable** — points to a runtime-mounted file
+3. **`HF_TOKEN_FILE` environment variable** — points to a runtime-mounted file
    containing the token (e.g. a file added as a Kaggle Dataset/Input, or
    written by a setup step). The runner reads the token from that file.
-3. **`--hf-token-file PATH` CLI argument** — an explicit path to a runtime
+4. **`--hf-token-file PATH` CLI argument** — an explicit path to a runtime
    token file, equivalent to `HF_TOKEN_FILE` but supplied on the command line.
    This argument must always be a **file path**, never the token value itself.
-4. **Local development fallback: `secrets/hf_token.txt`** — used only when
+5. **Local development fallback: `secrets/hf_token.txt`** — used only when
    running the script locally (outside Kaggle) and the file exists.
 
 **`secrets/hf_token.txt` is intentionally listed in `.gitignore` and is never
 committed to GitHub or uploaded to Kaggle.** On Kaggle, this file will not be
-present — use `HF_TOKEN` or `HF_TOKEN_FILE`/`--hf-token-file` instead.
+present — use a Kaggle Secret, `HF_TOKEN`, or `HF_TOKEN_FILE`/`--hf-token-file` instead.
 
 **How to get a token:**
 - Go to https://huggingface.co/settings/tokens
@@ -143,20 +146,26 @@ secrets/hf_token.txt   # contains only the token, never committed
 
 **Kaggle runtime setup (choose one):**
 ```
-# Option A: environment variable
+# Option A: Kaggle Secret (recommended on Kaggle)
+# Kernel editor → Add-ons → Secrets → add HF_TOKEN
+
+# Option B: environment variable
 export HF_TOKEN=<token>
 
-# Option B: runtime token file mounted into the kernel
+# Option C: runtime token file mounted into the kernel
 export HF_TOKEN_FILE=/path/to/mounted/token/file
 
-# Option C: CLI argument (file path only)
+# Option D: CLI argument (file path only)
 python run_bodhan_smoke_test.py --hf-token-file /path/to/mounted/token/file
 ```
 
-If none of these sources resolve a token, the runner fails clearly with:
+If `kaggle_secrets` is unavailable (e.g. local execution), that step is
+silently skipped and resolution falls through to the next source. If none of
+these sources resolve a token, the runner fails clearly with:
 ```
 Hugging Face authentication token not provided. Set HF_TOKEN or provide a runtime token file through HF_TOKEN_FILE.
 ```
+
 
 The runner never prints the token value, its length, or any derived characters —
 only `HF_TOKEN available: True` or `HF_TOKEN available: False`.
@@ -312,10 +321,10 @@ kaggle/
    - Ensures CUDA PyTorch is installed
 
 5. **STEP 5: Hugging Face Authentication**
-   - Resolves the token from `HF_TOKEN`, `HF_TOKEN_FILE` / `--hf-token-file`, or (locally only) `secrets/hf_token.txt`
+   - Resolves the token from Kaggle Secret `HF_TOKEN`, `HF_TOKEN` env var, `HF_TOKEN_FILE` / `--hf-token-file`, or (locally only) `secrets/hf_token.txt`
    - Authenticates with Hugging Face using the resolved token
    - Required to download Bodhan model weights
-   - Never prints the token value or Kaggle Secrets (Kaggle Secrets are not used)
+   - Never prints the token value
 
 6. **STEP 6: Smoke Test Execution**
    - Runs `scripts/smoke_test_training.py` with GPU configuration
