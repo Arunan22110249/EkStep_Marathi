@@ -328,6 +328,15 @@ def load_model_and_tokenizer(
             "✓ Model loaded successfully"
         )
 
+        if config.use_gradient_checkpointing:
+            logger.info("Enabling gradient checkpointing...")
+            model.gradient_checkpointing_enable()
+
+            if hasattr(model.config, "use_cache"):
+                model.config.use_cache = False
+
+            logger.info("Gradient checkpointing enabled")
+
         # Model statistics
         total_params = sum(
             p.numel()
