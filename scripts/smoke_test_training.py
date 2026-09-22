@@ -32,6 +32,7 @@ from dataclasses import dataclass
 import torch
 from torch.optim import Adam
 from transformers import AutoTokenizer, AutoModelForCausalLM
+from peft import LoraConfig, get_peft_model
 
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -80,6 +81,12 @@ class SmokeTestConfig:
     # Optimization configuration
     use_gradient_checkpointing: bool = False
     low_cpu_mem_usage: bool = True
+
+    # Parameter-efficient fine-tuning configuration
+    use_lora: bool = False
+    lora_rank: int = 8
+    lora_alpha: int = 16
+    lora_dropout: float = 0.05
 
     # Reporting configuration
     log_memory_every_n_steps: int = 1
@@ -223,6 +230,13 @@ def report_environment(config: SmokeTestConfig):
         f"{config.gradient_accumulation_steps}"
     )
 
+    logger.info(f"  LoRA: {config.use_lora}")
+
+    if config.use_lora:
+        logger.info(f"  LoRA Rank: {config.lora_rank}")
+        logger.info(f"  LoRA Alpha: {config.lora_alpha}")
+        logger.info(f"  LoRA Dropout: {config.lora_dropout}")
+
 
 # ---------------------------------------------------------------------------
 # Memory reporting
@@ -336,6 +350,36 @@ def load_model_and_tokenizer(
                 model.config.use_cache = False
 
             logger.info("Gradient checkpointing enabled")
+
+        # ------------------------------------------------------------
+        # Parameter-efficient fine-tuning with LoRA
+        # ------------------------------------------------------------
+        if config.use_lora:
+            logger.info("Enabling LoRA parameter-efficient fine-tuning...")
+
+            lora_config = LoraConfig(
+                r=config.lora_rank,
+                lora_alpha=config.lora_alpha,
+                lora_dropout=config.lora_dropout,
+                bias="none",
+                task_type="CAUSAL_LM",
+                target_modules=[
+                    "q_proj",
+                    "k_proj",
+                    "v_proj",
+                    "o_proj",
+                ],
+            )
+
+            model = get_peft_model(model, lora_config)
+
+            # Gradient checkpointing with a frozen base model requires
+            # gradients to be enabled on the model input embeddings.
+            if config.use_gradient_checkpointing:
+                model.enable_input_require_grads()
+
+            logger.info("LoRA enabled successfully")
+            model.print_trainable_parameters()
 
         # Model statistics
         total_params = sum(
@@ -618,8 +662,31 @@ def run_smoke_test(
 
     try:
 
+        trainable_parameters = [
+            parameter
+            for parameter in model.parameters()
+            if parameter.requires_grad
+        ]
+
+        trainable_parameter_count = sum(
+            parameter.numel()
+            for parameter in trainable_parameters
+        )
+
+        logger.info(
+            f"Trainable parameters passed to optimizer: "
+            f"{trainable_parameter_count:,} "
+            f"({trainable_parameter_count / 1e6:.2f}M)"
+        )
+
+        if not trainable_parameters:
+            raise RuntimeError(
+                "No trainable parameters found. "
+                "Check LoRA configuration and model freezing."
+            )
+
         optimizer = Adam(
-            model.parameters(),
+            trainable_parameters,
             lr=config.learning_rate,
         )
 
@@ -1160,6 +1227,33 @@ if __name__ == "__main__":
     # ------------------------------------------------------------------
 
     parser.add_argument(
+        "--lora",
+        action="store_true",
+        help="Enable LoRA parameter-efficient fine-tuning",
+    )
+
+    parser.add_argument(
+        "--lora-rank",
+        type=int,
+        default=8,
+        help="LoRA rank",
+    )
+
+    parser.add_argument(
+        "--lora-alpha",
+        type=int,
+        default=16,
+        help="LoRA alpha",
+    )
+
+    parser.add_argument(
+        "--lora-dropout",
+        type=float,
+        default=0.05,
+        help="LoRA dropout",
+    )
+
+    parser.add_argument(
         "--learning-rate",
         type=float,
         default=1e-5,
@@ -1239,6 +1333,10 @@ if __name__ == "__main__":
         learning_rate=args.learning_rate,
         num_steps=args.num_steps,
         max_seq_length=args.max_seq_length,
+        use_lora=args.lora,
+        lora_rank=args.lora_rank,
+        lora_alpha=args.lora_alpha,
+        lora_dropout=args.lora_dropout,
         use_gradient_checkpointing=(
             args.gradient_checkpointing
         ),
