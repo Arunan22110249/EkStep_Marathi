@@ -359,8 +359,10 @@ def main() -> None:
 
     if args.max_steps is not None:
         total_optimizer_steps = args.max_steps
+        training_epochs = math.ceil(total_optimizer_steps / steps_per_epoch)
     else:
         total_optimizer_steps = steps_per_epoch * config.num_epochs
+        training_epochs = config.num_epochs
 
     if total_optimizer_steps <= 0:
         raise RuntimeError("Calculated zero optimizer steps.")
@@ -451,7 +453,7 @@ def main() -> None:
 
     stop_training = False
 
-    for epoch in range(config.num_epochs):
+    for epoch in range(training_epochs):
         if stop_training:
             break
 
