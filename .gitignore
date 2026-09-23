@@ -20,3 +20,9 @@ checkpoints/
 *.wav
 *.flac
 .cache/
+
+# Generated training artifacts
+outputs/checkpoints/
+outputs/lora_smoke_test/
+outputs/*/checkpoint-*/
+outputs/*/final_adapter/

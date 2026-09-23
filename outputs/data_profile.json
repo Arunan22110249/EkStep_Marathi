@@ -1,0 +1,3105 @@
+{
+  "dataset": "SPRINGLab/IndicTTS_Marathi",
+  "split": "train",
+  "requested_samples": 500,
+  "processed_samples": 500,
+  "max_text_length": 512,
+  "max_audio_tokens": 2048,
+  "candidate_lengths": [
+    512,
+    768,
+    1024,
+    1536,
+    2048,
+    2600
+  ],
+  "load_and_profile_seconds": 532.6073689460754,
+  "statistics": {
+    "prompt_tokens": {
+      "count": 500,
+      "min": 29,
+      "mean": 52.24,
+      "median": 51.0,
+      "p90": 70.0,
+      "p95": 74.0,
+      "max": 99
+    },
+    "speech_tokens": {
+      "count": 500,
+      "min": 238,
+      "mean": 623.602,
+      "median": 602.0,
+      "p90": 889.7000000000002,
+      "p95": 1001.0,
+      "max": 1435
+    },
+    "total_sequence_tokens": {
+      "count": 500,
+      "min": 269,
+      "mean": 677.842,
+      "median": 655.5,
+      "p90": 964.1,
+      "p95": 1073.2999999999997,
+      "max": 1536
+    }
+  },
+  "candidate_analysis": [
+    {
+      "max_seq_length": 512,
+      "samples": 500,
+      "fully_retained": 139,
+      "truncated": 361,
+      "truncation_percentage": 72.2,
+      "average_original_speech_tokens": 623.602,
+      "average_retained_speech_tokens": 432.866
+    },
+    {
+      "max_seq_length": 768,
+      "samples": 500,
+      "fully_retained": 338,
+      "truncated": 162,
+      "truncation_percentage": 32.4,
+      "average_original_speech_tokens": 623.602,
+      "average_retained_speech_tokens": 567.846
+    },
+    {
+      "max_seq_length": 1024,
+      "samples": 500,
+      "fully_retained": 464,
+      "truncated": 36,
+      "truncation_percentage": 7.2,
+      "average_original_speech_tokens": 623.602,
+      "average_retained_speech_tokens": 614.084
+    },
+    {
+      "max_seq_length": 1536,
+      "samples": 500,
+      "fully_retained": 500,
+      "truncated": 0,
+      "truncation_percentage": 0.0,
+      "average_original_speech_tokens": 623.602,
+      "average_retained_speech_tokens": 623.602
+    },
+    {
+      "max_seq_length": 2048,
+      "samples": 500,
+      "fully_retained": 500,
+      "truncated": 0,
+      "truncation_percentage": 0.0,
+      "average_original_speech_tokens": 623.602,
+      "average_retained_speech_tokens": 623.602
+    },
+    {
+      "max_seq_length": 2600,
+      "samples": 500,
+      "fully_retained": 500,
+      "truncated": 0,
+      "truncation_percentage": 0.0,
+      "average_original_speech_tokens": 623.602,
+      "average_retained_speech_tokens": 623.602
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "text_length": 47,
+      "speech_length": 469,
+      "total_length": 518
+    },
+    {
+      "index": 1,
+      "text_length": 63,
+      "speech_length": 756,
+      "total_length": 821
+    },
+    {
+      "index": 2,
+      "text_length": 59,
+      "speech_length": 770,
+      "total_length": 831
+    },
+    {
+      "index": 3,
+      "text_length": 40,
+      "speech_length": 427,
+      "total_length": 469
+    },
+    {
+      "index": 4,
+      "text_length": 78,
+      "speech_length": 1106,
+      "total_length": 1186
+    },
+    {
+      "index": 5,
+      "text_length": 35,
+      "speech_length": 406,
+      "total_length": 443
+    },
+    {
+      "index": 6,
+      "text_length": 59,
+      "speech_length": 756,
+      "total_length": 817
+    },
+    {
+      "index": 7,
+      "text_length": 44,
+      "speech_length": 539,
+      "total_length": 585
+    },
+    {
+      "index": 8,
+      "text_length": 44,
+      "speech_length": 581,
+      "total_length": 627
+    },
+    {
+      "index": 9,
+      "text_length": 43,
+      "speech_length": 553,
+      "total_length": 598
+    },
+    {
+      "index": 10,
+      "text_length": 50,
+      "speech_length": 595,
+      "total_length": 647
+    },
+    {
+      "index": 11,
+      "text_length": 35,
+      "speech_length": 378,
+      "total_length": 415
+    },
+    {
+      "index": 12,
+      "text_length": 61,
+      "speech_length": 805,
+      "total_length": 868
+    },
+    {
+      "index": 13,
+      "text_length": 55,
+      "speech_length": 763,
+      "total_length": 820
+    },
+    {
+      "index": 14,
+      "text_length": 39,
+      "speech_length": 406,
+      "total_length": 447
+    },
+    {
+      "index": 15,
+      "text_length": 40,
+      "speech_length": 525,
+      "total_length": 567
+    },
+    {
+      "index": 16,
+      "text_length": 57,
+      "speech_length": 812,
+      "total_length": 871
+    },
+    {
+      "index": 17,
+      "text_length": 43,
+      "speech_length": 553,
+      "total_length": 598
+    },
+    {
+      "index": 18,
+      "text_length": 63,
+      "speech_length": 1064,
+      "total_length": 1129
+    },
+    {
+      "index": 19,
+      "text_length": 33,
+      "speech_length": 357,
+      "total_length": 392
+    },
+    {
+      "index": 20,
+      "text_length": 43,
+      "speech_length": 553,
+      "total_length": 598
+    },
+    {
+      "index": 21,
+      "text_length": 45,
+      "speech_length": 567,
+      "total_length": 614
+    },
+    {
+      "index": 22,
+      "text_length": 31,
+      "speech_length": 343,
+      "total_length": 376
+    },
+    {
+      "index": 23,
+      "text_length": 66,
+      "speech_length": 903,
+      "total_length": 971
+    },
+    {
+      "index": 24,
+      "text_length": 51,
+      "speech_length": 742,
+      "total_length": 795
+    },
+    {
+      "index": 25,
+      "text_length": 49,
+      "speech_length": 602,
+      "total_length": 653
+    },
+    {
+      "index": 26,
+      "text_length": 62,
+      "speech_length": 833,
+      "total_length": 897
+    },
+    {
+      "index": 27,
+      "text_length": 38,
+      "speech_length": 364,
+      "total_length": 404
+    },
+    {
+      "index": 28,
+      "text_length": 50,
+      "speech_length": 637,
+      "total_length": 689
+    },
+    {
+      "index": 29,
+      "text_length": 59,
+      "speech_length": 707,
+      "total_length": 768
+    },
+    {
+      "index": 30,
+      "text_length": 40,
+      "speech_length": 434,
+      "total_length": 476
+    },
+    {
+      "index": 31,
+      "text_length": 93,
+      "speech_length": 1113,
+      "total_length": 1208
+    },
+    {
+      "index": 32,
+      "text_length": 50,
+      "speech_length": 581,
+      "total_length": 633
+    },
+    {
+      "index": 33,
+      "text_length": 71,
+      "speech_length": 868,
+      "total_length": 941
+    },
+    {
+      "index": 34,
+      "text_length": 38,
+      "speech_length": 441,
+      "total_length": 481
+    },
+    {
+      "index": 35,
+      "text_length": 57,
+      "speech_length": 651,
+      "total_length": 710
+    },
+    {
+      "index": 36,
+      "text_length": 51,
+      "speech_length": 581,
+      "total_length": 634
+    },
+    {
+      "index": 37,
+      "text_length": 63,
+      "speech_length": 679,
+      "total_length": 744
+    },
+    {
+      "index": 38,
+      "text_length": 43,
+      "speech_length": 448,
+      "total_length": 493
+    },
+    {
+      "index": 39,
+      "text_length": 69,
+      "speech_length": 833,
+      "total_length": 904
+    },
+    {
+      "index": 40,
+      "text_length": 38,
+      "speech_length": 399,
+      "total_length": 439
+    },
+    {
+      "index": 41,
+      "text_length": 84,
+      "speech_length": 1106,
+      "total_length": 1192
+    },
+    {
+      "index": 42,
+      "text_length": 48,
+      "speech_length": 532,
+      "total_length": 582
+    },
+    {
+      "index": 43,
+      "text_length": 35,
+      "speech_length": 336,
+      "total_length": 373
+    },
+    {
+      "index": 44,
+      "text_length": 32,
+      "speech_length": 308,
+      "total_length": 342
+    },
+    {
+      "index": 45,
+      "text_length": 50,
+      "speech_length": 581,
+      "total_length": 633
+    },
+    {
+      "index": 46,
+      "text_length": 49,
+      "speech_length": 623,
+      "total_length": 674
+    },
+    {
+      "index": 47,
+      "text_length": 55,
+      "speech_length": 609,
+      "total_length": 666
+    },
+    {
+      "index": 48,
+      "text_length": 55,
+      "speech_length": 707,
+      "total_length": 764
+    },
+    {
+      "index": 49,
+      "text_length": 45,
+      "speech_length": 490,
+      "total_length": 537
+    },
+    {
+      "index": 50,
+      "text_length": 42,
+      "speech_length": 462,
+      "total_length": 506
+    },
+    {
+      "index": 51,
+      "text_length": 42,
+      "speech_length": 490,
+      "total_length": 534
+    },
+    {
+      "index": 52,
+      "text_length": 51,
+      "speech_length": 616,
+      "total_length": 669
+    },
+    {
+      "index": 53,
+      "text_length": 40,
+      "speech_length": 420,
+      "total_length": 462
+    },
+    {
+      "index": 54,
+      "text_length": 42,
+      "speech_length": 490,
+      "total_length": 534
+    },
+    {
+      "index": 55,
+      "text_length": 44,
+      "speech_length": 455,
+      "total_length": 501
+    },
+    {
+      "index": 56,
+      "text_length": 74,
+      "speech_length": 973,
+      "total_length": 1049
+    },
+    {
+      "index": 57,
+      "text_length": 73,
+      "speech_length": 889,
+      "total_length": 964
+    },
+    {
+      "index": 58,
+      "text_length": 35,
+      "speech_length": 392,
+      "total_length": 429
+    },
+    {
+      "index": 59,
+      "text_length": 54,
+      "speech_length": 602,
+      "total_length": 658
+    },
+    {
+      "index": 60,
+      "text_length": 61,
+      "speech_length": 742,
+      "total_length": 805
+    },
+    {
+      "index": 61,
+      "text_length": 43,
+      "speech_length": 455,
+      "total_length": 500
+    },
+    {
+      "index": 62,
+      "text_length": 91,
+      "speech_length": 1197,
+      "total_length": 1290
+    },
+    {
+      "index": 63,
+      "text_length": 63,
+      "speech_length": 665,
+      "total_length": 730
+    },
+    {
+      "index": 64,
+      "text_length": 56,
+      "speech_length": 770,
+      "total_length": 828
+    },
+    {
+      "index": 65,
+      "text_length": 30,
+      "speech_length": 308,
+      "total_length": 340
+    },
+    {
+      "index": 66,
+      "text_length": 70,
+      "speech_length": 819,
+      "total_length": 891
+    },
+    {
+      "index": 67,
+      "text_length": 31,
+      "speech_length": 238,
+      "total_length": 271
+    },
+    {
+      "index": 68,
+      "text_length": 51,
+      "speech_length": 672,
+      "total_length": 725
+    },
+    {
+      "index": 69,
+      "text_length": 32,
+      "speech_length": 280,
+      "total_length": 314
+    },
+    {
+      "index": 70,
+      "text_length": 75,
+      "speech_length": 868,
+      "total_length": 945
+    },
+    {
+      "index": 71,
+      "text_length": 33,
+      "speech_length": 280,
+      "total_length": 315
+    },
+    {
+      "index": 72,
+      "text_length": 70,
+      "speech_length": 861,
+      "total_length": 933
+    },
+    {
+      "index": 73,
+      "text_length": 38,
+      "speech_length": 413,
+      "total_length": 453
+    },
+    {
+      "index": 74,
+      "text_length": 86,
+      "speech_length": 1071,
+      "total_length": 1159
+    },
+    {
+      "index": 75,
+      "text_length": 69,
+      "speech_length": 756,
+      "total_length": 827
+    },
+    {
+      "index": 76,
+      "text_length": 50,
+      "speech_length": 651,
+      "total_length": 703
+    },
+    {
+      "index": 77,
+      "text_length": 38,
+      "speech_length": 392,
+      "total_length": 432
+    },
+    {
+      "index": 78,
+      "text_length": 56,
+      "speech_length": 777,
+      "total_length": 835
+    },
+    {
+      "index": 79,
+      "text_length": 61,
+      "speech_length": 763,
+      "total_length": 826
+    },
+    {
+      "index": 80,
+      "text_length": 78,
+      "speech_length": 1022,
+      "total_length": 1102
+    },
+    {
+      "index": 81,
+      "text_length": 49,
+      "speech_length": 588,
+      "total_length": 639
+    },
+    {
+      "index": 82,
+      "text_length": 31,
+      "speech_length": 266,
+      "total_length": 299
+    },
+    {
+      "index": 83,
+      "text_length": 72,
+      "speech_length": 812,
+      "total_length": 886
+    },
+    {
+      "index": 84,
+      "text_length": 67,
+      "speech_length": 896,
+      "total_length": 965
+    },
+    {
+      "index": 85,
+      "text_length": 49,
+      "speech_length": 560,
+      "total_length": 611
+    },
+    {
+      "index": 86,
+      "text_length": 57,
+      "speech_length": 595,
+      "total_length": 654
+    },
+    {
+      "index": 87,
+      "text_length": 45,
+      "speech_length": 497,
+      "total_length": 544
+    },
+    {
+      "index": 88,
+      "text_length": 46,
+      "speech_length": 532,
+      "total_length": 580
+    },
+    {
+      "index": 89,
+      "text_length": 64,
+      "speech_length": 798,
+      "total_length": 864
+    },
+    {
+      "index": 90,
+      "text_length": 41,
+      "speech_length": 427,
+      "total_length": 470
+    },
+    {
+      "index": 91,
+      "text_length": 50,
+      "speech_length": 518,
+      "total_length": 570
+    },
+    {
+      "index": 92,
+      "text_length": 53,
+      "speech_length": 623,
+      "total_length": 678
+    },
+    {
+      "index": 93,
+      "text_length": 55,
+      "speech_length": 525,
+      "total_length": 582
+    },
+    {
+      "index": 94,
+      "text_length": 41,
+      "speech_length": 448,
+      "total_length": 491
+    },
+    {
+      "index": 95,
+      "text_length": 62,
+      "speech_length": 826,
+      "total_length": 890
+    },
+    {
+      "index": 96,
+      "text_length": 71,
+      "speech_length": 861,
+      "total_length": 934
+    },
+    {
+      "index": 97,
+      "text_length": 74,
+      "speech_length": 861,
+      "total_length": 937
+    },
+    {
+      "index": 98,
+      "text_length": 50,
+      "speech_length": 567,
+      "total_length": 619
+    },
+    {
+      "index": 99,
+      "text_length": 45,
+      "speech_length": 560,
+      "total_length": 607
+    },
+    {
+      "index": 100,
+      "text_length": 36,
+      "speech_length": 315,
+      "total_length": 353
+    },
+    {
+      "index": 101,
+      "text_length": 59,
+      "speech_length": 826,
+      "total_length": 887
+    },
+    {
+      "index": 102,
+      "text_length": 44,
+      "speech_length": 504,
+      "total_length": 550
+    },
+    {
+      "index": 103,
+      "text_length": 62,
+      "speech_length": 749,
+      "total_length": 813
+    },
+    {
+      "index": 104,
+      "text_length": 57,
+      "speech_length": 693,
+      "total_length": 752
+    },
+    {
+      "index": 105,
+      "text_length": 57,
+      "speech_length": 735,
+      "total_length": 794
+    },
+    {
+      "index": 106,
+      "text_length": 48,
+      "speech_length": 574,
+      "total_length": 624
+    },
+    {
+      "index": 107,
+      "text_length": 43,
+      "speech_length": 462,
+      "total_length": 507
+    },
+    {
+      "index": 108,
+      "text_length": 59,
+      "speech_length": 672,
+      "total_length": 733
+    },
+    {
+      "index": 109,
+      "text_length": 51,
+      "speech_length": 616,
+      "total_length": 669
+    },
+    {
+      "index": 110,
+      "text_length": 38,
+      "speech_length": 441,
+      "total_length": 481
+    },
+    {
+      "index": 111,
+      "text_length": 64,
+      "speech_length": 854,
+      "total_length": 920
+    },
+    {
+      "index": 112,
+      "text_length": 43,
+      "speech_length": 476,
+      "total_length": 521
+    },
+    {
+      "index": 113,
+      "text_length": 68,
+      "speech_length": 812,
+      "total_length": 882
+    },
+    {
+      "index": 114,
+      "text_length": 43,
+      "speech_length": 462,
+      "total_length": 507
+    },
+    {
+      "index": 115,
+      "text_length": 85,
+      "speech_length": 1043,
+      "total_length": 1130
+    },
+    {
+      "index": 116,
+      "text_length": 66,
+      "speech_length": 791,
+      "total_length": 859
+    },
+    {
+      "index": 117,
+      "text_length": 37,
+      "speech_length": 336,
+      "total_length": 375
+    },
+    {
+      "index": 118,
+      "text_length": 68,
+      "speech_length": 875,
+      "total_length": 945
+    },
+    {
+      "index": 119,
+      "text_length": 63,
+      "speech_length": 826,
+      "total_length": 891
+    },
+    {
+      "index": 120,
+      "text_length": 66,
+      "speech_length": 791,
+      "total_length": 859
+    },
+    {
+      "index": 121,
+      "text_length": 51,
+      "speech_length": 658,
+      "total_length": 711
+    },
+    {
+      "index": 122,
+      "text_length": 72,
+      "speech_length": 952,
+      "total_length": 1026
+    },
+    {
+      "index": 123,
+      "text_length": 54,
+      "speech_length": 665,
+      "total_length": 721
+    },
+    {
+      "index": 124,
+      "text_length": 35,
+      "speech_length": 343,
+      "total_length": 380
+    },
+    {
+      "index": 125,
+      "text_length": 61,
+      "speech_length": 679,
+      "total_length": 742
+    },
+    {
+      "index": 126,
+      "text_length": 48,
+      "speech_length": 574,
+      "total_length": 624
+    },
+    {
+      "index": 127,
+      "text_length": 65,
+      "speech_length": 742,
+      "total_length": 809
+    },
+    {
+      "index": 128,
+      "text_length": 43,
+      "speech_length": 539,
+      "total_length": 584
+    },
+    {
+      "index": 129,
+      "text_length": 47,
+      "speech_length": 567,
+      "total_length": 616
+    },
+    {
+      "index": 130,
+      "text_length": 44,
+      "speech_length": 490,
+      "total_length": 536
+    },
+    {
+      "index": 131,
+      "text_length": 36,
+      "speech_length": 532,
+      "total_length": 570
+    },
+    {
+      "index": 132,
+      "text_length": 52,
+      "speech_length": 756,
+      "total_length": 810
+    },
+    {
+      "index": 133,
+      "text_length": 54,
+      "speech_length": 763,
+      "total_length": 819
+    },
+    {
+      "index": 134,
+      "text_length": 65,
+      "speech_length": 875,
+      "total_length": 942
+    },
+    {
+      "index": 135,
+      "text_length": 43,
+      "speech_length": 483,
+      "total_length": 528
+    },
+    {
+      "index": 136,
+      "text_length": 39,
+      "speech_length": 490,
+      "total_length": 531
+    },
+    {
+      "index": 137,
+      "text_length": 61,
+      "speech_length": 854,
+      "total_length": 917
+    },
+    {
+      "index": 138,
+      "text_length": 69,
+      "speech_length": 903,
+      "total_length": 974
+    },
+    {
+      "index": 139,
+      "text_length": 57,
+      "speech_length": 805,
+      "total_length": 864
+    },
+    {
+      "index": 140,
+      "text_length": 49,
+      "speech_length": 630,
+      "total_length": 681
+    },
+    {
+      "index": 141,
+      "text_length": 67,
+      "speech_length": 987,
+      "total_length": 1056
+    },
+    {
+      "index": 142,
+      "text_length": 42,
+      "speech_length": 504,
+      "total_length": 548
+    },
+    {
+      "index": 143,
+      "text_length": 60,
+      "speech_length": 784,
+      "total_length": 846
+    },
+    {
+      "index": 144,
+      "text_length": 45,
+      "speech_length": 476,
+      "total_length": 523
+    },
+    {
+      "index": 145,
+      "text_length": 41,
+      "speech_length": 448,
+      "total_length": 491
+    },
+    {
+      "index": 146,
+      "text_length": 65,
+      "speech_length": 980,
+      "total_length": 1047
+    },
+    {
+      "index": 147,
+      "text_length": 46,
+      "speech_length": 574,
+      "total_length": 622
+    },
+    {
+      "index": 148,
+      "text_length": 37,
+      "speech_length": 385,
+      "total_length": 424
+    },
+    {
+      "index": 149,
+      "text_length": 43,
+      "speech_length": 441,
+      "total_length": 486
+    },
+    {
+      "index": 150,
+      "text_length": 41,
+      "speech_length": 455,
+      "total_length": 498
+    },
+    {
+      "index": 151,
+      "text_length": 74,
+      "speech_length": 1246,
+      "total_length": 1322
+    },
+    {
+      "index": 152,
+      "text_length": 79,
+      "speech_length": 1099,
+      "total_length": 1180
+    },
+    {
+      "index": 153,
+      "text_length": 68,
+      "speech_length": 917,
+      "total_length": 987
+    },
+    {
+      "index": 154,
+      "text_length": 64,
+      "speech_length": 903,
+      "total_length": 969
+    },
+    {
+      "index": 155,
+      "text_length": 39,
+      "speech_length": 427,
+      "total_length": 468
+    },
+    {
+      "index": 156,
+      "text_length": 62,
+      "speech_length": 861,
+      "total_length": 925
+    },
+    {
+      "index": 157,
+      "text_length": 47,
+      "speech_length": 588,
+      "total_length": 637
+    },
+    {
+      "index": 158,
+      "text_length": 58,
+      "speech_length": 826,
+      "total_length": 886
+    },
+    {
+      "index": 159,
+      "text_length": 76,
+      "speech_length": 1085,
+      "total_length": 1163
+    },
+    {
+      "index": 160,
+      "text_length": 49,
+      "speech_length": 560,
+      "total_length": 611
+    },
+    {
+      "index": 161,
+      "text_length": 50,
+      "speech_length": 602,
+      "total_length": 654
+    },
+    {
+      "index": 162,
+      "text_length": 78,
+      "speech_length": 1078,
+      "total_length": 1158
+    },
+    {
+      "index": 163,
+      "text_length": 67,
+      "speech_length": 1085,
+      "total_length": 1154
+    },
+    {
+      "index": 164,
+      "text_length": 71,
+      "speech_length": 1008,
+      "total_length": 1081
+    },
+    {
+      "index": 165,
+      "text_length": 40,
+      "speech_length": 469,
+      "total_length": 511
+    },
+    {
+      "index": 166,
+      "text_length": 76,
+      "speech_length": 1281,
+      "total_length": 1359
+    },
+    {
+      "index": 167,
+      "text_length": 49,
+      "speech_length": 686,
+      "total_length": 737
+    },
+    {
+      "index": 168,
+      "text_length": 52,
+      "speech_length": 798,
+      "total_length": 852
+    },
+    {
+      "index": 169,
+      "text_length": 53,
+      "speech_length": 700,
+      "total_length": 755
+    },
+    {
+      "index": 170,
+      "text_length": 49,
+      "speech_length": 546,
+      "total_length": 597
+    },
+    {
+      "index": 171,
+      "text_length": 56,
+      "speech_length": 714,
+      "total_length": 772
+    },
+    {
+      "index": 172,
+      "text_length": 43,
+      "speech_length": 532,
+      "total_length": 577
+    },
+    {
+      "index": 173,
+      "text_length": 48,
+      "speech_length": 602,
+      "total_length": 652
+    },
+    {
+      "index": 174,
+      "text_length": 69,
+      "speech_length": 1001,
+      "total_length": 1072
+    },
+    {
+      "index": 175,
+      "text_length": 53,
+      "speech_length": 665,
+      "total_length": 720
+    },
+    {
+      "index": 176,
+      "text_length": 44,
+      "speech_length": 546,
+      "total_length": 592
+    },
+    {
+      "index": 177,
+      "text_length": 77,
+      "speech_length": 1141,
+      "total_length": 1220
+    },
+    {
+      "index": 178,
+      "text_length": 64,
+      "speech_length": 777,
+      "total_length": 843
+    },
+    {
+      "index": 179,
+      "text_length": 79,
+      "speech_length": 1134,
+      "total_length": 1215
+    },
+    {
+      "index": 180,
+      "text_length": 56,
+      "speech_length": 721,
+      "total_length": 779
+    },
+    {
+      "index": 181,
+      "text_length": 73,
+      "speech_length": 1043,
+      "total_length": 1118
+    },
+    {
+      "index": 182,
+      "text_length": 71,
+      "speech_length": 945,
+      "total_length": 1018
+    },
+    {
+      "index": 183,
+      "text_length": 56,
+      "speech_length": 651,
+      "total_length": 709
+    },
+    {
+      "index": 184,
+      "text_length": 65,
+      "speech_length": 861,
+      "total_length": 928
+    },
+    {
+      "index": 185,
+      "text_length": 59,
+      "speech_length": 763,
+      "total_length": 824
+    },
+    {
+      "index": 186,
+      "text_length": 60,
+      "speech_length": 693,
+      "total_length": 755
+    },
+    {
+      "index": 187,
+      "text_length": 51,
+      "speech_length": 693,
+      "total_length": 746
+    },
+    {
+      "index": 188,
+      "text_length": 71,
+      "speech_length": 966,
+      "total_length": 1039
+    },
+    {
+      "index": 189,
+      "text_length": 66,
+      "speech_length": 833,
+      "total_length": 901
+    },
+    {
+      "index": 190,
+      "text_length": 62,
+      "speech_length": 791,
+      "total_length": 855
+    },
+    {
+      "index": 191,
+      "text_length": 67,
+      "speech_length": 882,
+      "total_length": 951
+    },
+    {
+      "index": 192,
+      "text_length": 68,
+      "speech_length": 798,
+      "total_length": 868
+    },
+    {
+      "index": 193,
+      "text_length": 53,
+      "speech_length": 560,
+      "total_length": 615
+    },
+    {
+      "index": 194,
+      "text_length": 51,
+      "speech_length": 756,
+      "total_length": 809
+    },
+    {
+      "index": 195,
+      "text_length": 47,
+      "speech_length": 595,
+      "total_length": 644
+    },
+    {
+      "index": 196,
+      "text_length": 48,
+      "speech_length": 483,
+      "total_length": 533
+    },
+    {
+      "index": 197,
+      "text_length": 64,
+      "speech_length": 763,
+      "total_length": 829
+    },
+    {
+      "index": 198,
+      "text_length": 45,
+      "speech_length": 546,
+      "total_length": 593
+    },
+    {
+      "index": 199,
+      "text_length": 47,
+      "speech_length": 525,
+      "total_length": 574
+    },
+    {
+      "index": 200,
+      "text_length": 48,
+      "speech_length": 574,
+      "total_length": 624
+    },
+    {
+      "index": 201,
+      "text_length": 71,
+      "speech_length": 1078,
+      "total_length": 1151
+    },
+    {
+      "index": 202,
+      "text_length": 38,
+      "speech_length": 392,
+      "total_length": 432
+    },
+    {
+      "index": 203,
+      "text_length": 44,
+      "speech_length": 525,
+      "total_length": 571
+    },
+    {
+      "index": 204,
+      "text_length": 58,
+      "speech_length": 791,
+      "total_length": 851
+    },
+    {
+      "index": 205,
+      "text_length": 71,
+      "speech_length": 798,
+      "total_length": 871
+    },
+    {
+      "index": 206,
+      "text_length": 43,
+      "speech_length": 560,
+      "total_length": 605
+    },
+    {
+      "index": 207,
+      "text_length": 37,
+      "speech_length": 350,
+      "total_length": 389
+    },
+    {
+      "index": 208,
+      "text_length": 47,
+      "speech_length": 553,
+      "total_length": 602
+    },
+    {
+      "index": 209,
+      "text_length": 56,
+      "speech_length": 644,
+      "total_length": 702
+    },
+    {
+      "index": 210,
+      "text_length": 60,
+      "speech_length": 700,
+      "total_length": 762
+    },
+    {
+      "index": 211,
+      "text_length": 45,
+      "speech_length": 539,
+      "total_length": 586
+    },
+    {
+      "index": 212,
+      "text_length": 63,
+      "speech_length": 840,
+      "total_length": 905
+    },
+    {
+      "index": 213,
+      "text_length": 54,
+      "speech_length": 756,
+      "total_length": 812
+    },
+    {
+      "index": 214,
+      "text_length": 56,
+      "speech_length": 602,
+      "total_length": 660
+    },
+    {
+      "index": 215,
+      "text_length": 40,
+      "speech_length": 413,
+      "total_length": 455
+    },
+    {
+      "index": 216,
+      "text_length": 34,
+      "speech_length": 385,
+      "total_length": 421
+    },
+    {
+      "index": 217,
+      "text_length": 45,
+      "speech_length": 581,
+      "total_length": 628
+    },
+    {
+      "index": 218,
+      "text_length": 70,
+      "speech_length": 1155,
+      "total_length": 1227
+    },
+    {
+      "index": 219,
+      "text_length": 41,
+      "speech_length": 476,
+      "total_length": 519
+    },
+    {
+      "index": 220,
+      "text_length": 40,
+      "speech_length": 378,
+      "total_length": 420
+    },
+    {
+      "index": 221,
+      "text_length": 42,
+      "speech_length": 476,
+      "total_length": 520
+    },
+    {
+      "index": 222,
+      "text_length": 54,
+      "speech_length": 714,
+      "total_length": 770
+    },
+    {
+      "index": 223,
+      "text_length": 33,
+      "speech_length": 329,
+      "total_length": 364
+    },
+    {
+      "index": 224,
+      "text_length": 68,
+      "speech_length": 861,
+      "total_length": 931
+    },
+    {
+      "index": 225,
+      "text_length": 37,
+      "speech_length": 343,
+      "total_length": 382
+    },
+    {
+      "index": 226,
+      "text_length": 63,
+      "speech_length": 833,
+      "total_length": 898
+    },
+    {
+      "index": 227,
+      "text_length": 40,
+      "speech_length": 504,
+      "total_length": 546
+    },
+    {
+      "index": 228,
+      "text_length": 38,
+      "speech_length": 413,
+      "total_length": 453
+    },
+    {
+      "index": 229,
+      "text_length": 57,
+      "speech_length": 658,
+      "total_length": 717
+    },
+    {
+      "index": 230,
+      "text_length": 36,
+      "speech_length": 385,
+      "total_length": 423
+    },
+    {
+      "index": 231,
+      "text_length": 64,
+      "speech_length": 833,
+      "total_length": 899
+    },
+    {
+      "index": 232,
+      "text_length": 62,
+      "speech_length": 770,
+      "total_length": 834
+    },
+    {
+      "index": 233,
+      "text_length": 57,
+      "speech_length": 777,
+      "total_length": 836
+    },
+    {
+      "index": 234,
+      "text_length": 41,
+      "speech_length": 448,
+      "total_length": 491
+    },
+    {
+      "index": 235,
+      "text_length": 50,
+      "speech_length": 581,
+      "total_length": 633
+    },
+    {
+      "index": 236,
+      "text_length": 55,
+      "speech_length": 756,
+      "total_length": 813
+    },
+    {
+      "index": 237,
+      "text_length": 51,
+      "speech_length": 714,
+      "total_length": 767
+    },
+    {
+      "index": 238,
+      "text_length": 53,
+      "speech_length": 679,
+      "total_length": 734
+    },
+    {
+      "index": 239,
+      "text_length": 53,
+      "speech_length": 532,
+      "total_length": 587
+    },
+    {
+      "index": 240,
+      "text_length": 56,
+      "speech_length": 756,
+      "total_length": 814
+    },
+    {
+      "index": 241,
+      "text_length": 32,
+      "speech_length": 315,
+      "total_length": 349
+    },
+    {
+      "index": 242,
+      "text_length": 67,
+      "speech_length": 840,
+      "total_length": 909
+    },
+    {
+      "index": 243,
+      "text_length": 34,
+      "speech_length": 378,
+      "total_length": 414
+    },
+    {
+      "index": 244,
+      "text_length": 35,
+      "speech_length": 336,
+      "total_length": 373
+    },
+    {
+      "index": 245,
+      "text_length": 55,
+      "speech_length": 679,
+      "total_length": 736
+    },
+    {
+      "index": 246,
+      "text_length": 42,
+      "speech_length": 462,
+      "total_length": 506
+    },
+    {
+      "index": 247,
+      "text_length": 31,
+      "speech_length": 350,
+      "total_length": 383
+    },
+    {
+      "index": 248,
+      "text_length": 63,
+      "speech_length": 868,
+      "total_length": 933
+    },
+    {
+      "index": 249,
+      "text_length": 54,
+      "speech_length": 644,
+      "total_length": 700
+    },
+    {
+      "index": 250,
+      "text_length": 36,
+      "speech_length": 378,
+      "total_length": 416
+    },
+    {
+      "index": 251,
+      "text_length": 41,
+      "speech_length": 399,
+      "total_length": 442
+    },
+    {
+      "index": 252,
+      "text_length": 49,
+      "speech_length": 595,
+      "total_length": 646
+    },
+    {
+      "index": 253,
+      "text_length": 49,
+      "speech_length": 595,
+      "total_length": 646
+    },
+    {
+      "index": 254,
+      "text_length": 43,
+      "speech_length": 441,
+      "total_length": 486
+    },
+    {
+      "index": 255,
+      "text_length": 59,
+      "speech_length": 742,
+      "total_length": 803
+    },
+    {
+      "index": 256,
+      "text_length": 32,
+      "speech_length": 287,
+      "total_length": 321
+    },
+    {
+      "index": 257,
+      "text_length": 57,
+      "speech_length": 658,
+      "total_length": 717
+    },
+    {
+      "index": 258,
+      "text_length": 64,
+      "speech_length": 826,
+      "total_length": 892
+    },
+    {
+      "index": 259,
+      "text_length": 66,
+      "speech_length": 819,
+      "total_length": 887
+    },
+    {
+      "index": 260,
+      "text_length": 40,
+      "speech_length": 406,
+      "total_length": 448
+    },
+    {
+      "index": 261,
+      "text_length": 61,
+      "speech_length": 854,
+      "total_length": 917
+    },
+    {
+      "index": 262,
+      "text_length": 38,
+      "speech_length": 469,
+      "total_length": 509
+    },
+    {
+      "index": 263,
+      "text_length": 77,
+      "speech_length": 973,
+      "total_length": 1052
+    },
+    {
+      "index": 264,
+      "text_length": 56,
+      "speech_length": 616,
+      "total_length": 674
+    },
+    {
+      "index": 265,
+      "text_length": 64,
+      "speech_length": 756,
+      "total_length": 822
+    },
+    {
+      "index": 266,
+      "text_length": 45,
+      "speech_length": 518,
+      "total_length": 565
+    },
+    {
+      "index": 267,
+      "text_length": 39,
+      "speech_length": 427,
+      "total_length": 468
+    },
+    {
+      "index": 268,
+      "text_length": 42,
+      "speech_length": 476,
+      "total_length": 520
+    },
+    {
+      "index": 269,
+      "text_length": 67,
+      "speech_length": 826,
+      "total_length": 895
+    },
+    {
+      "index": 270,
+      "text_length": 69,
+      "speech_length": 896,
+      "total_length": 967
+    },
+    {
+      "index": 271,
+      "text_length": 61,
+      "speech_length": 735,
+      "total_length": 798
+    },
+    {
+      "index": 272,
+      "text_length": 39,
+      "speech_length": 420,
+      "total_length": 461
+    },
+    {
+      "index": 273,
+      "text_length": 49,
+      "speech_length": 623,
+      "total_length": 674
+    },
+    {
+      "index": 274,
+      "text_length": 54,
+      "speech_length": 742,
+      "total_length": 798
+    },
+    {
+      "index": 275,
+      "text_length": 56,
+      "speech_length": 693,
+      "total_length": 751
+    },
+    {
+      "index": 276,
+      "text_length": 43,
+      "speech_length": 511,
+      "total_length": 556
+    },
+    {
+      "index": 277,
+      "text_length": 33,
+      "speech_length": 364,
+      "total_length": 399
+    },
+    {
+      "index": 278,
+      "text_length": 30,
+      "speech_length": 343,
+      "total_length": 375
+    },
+    {
+      "index": 279,
+      "text_length": 51,
+      "speech_length": 630,
+      "total_length": 683
+    },
+    {
+      "index": 280,
+      "text_length": 57,
+      "speech_length": 826,
+      "total_length": 885
+    },
+    {
+      "index": 281,
+      "text_length": 60,
+      "speech_length": 693,
+      "total_length": 755
+    },
+    {
+      "index": 282,
+      "text_length": 61,
+      "speech_length": 693,
+      "total_length": 756
+    },
+    {
+      "index": 283,
+      "text_length": 57,
+      "speech_length": 602,
+      "total_length": 661
+    },
+    {
+      "index": 284,
+      "text_length": 53,
+      "speech_length": 686,
+      "total_length": 741
+    },
+    {
+      "index": 285,
+      "text_length": 60,
+      "speech_length": 658,
+      "total_length": 720
+    },
+    {
+      "index": 286,
+      "text_length": 56,
+      "speech_length": 665,
+      "total_length": 723
+    },
+    {
+      "index": 287,
+      "text_length": 32,
+      "speech_length": 294,
+      "total_length": 328
+    },
+    {
+      "index": 288,
+      "text_length": 43,
+      "speech_length": 399,
+      "total_length": 444
+    },
+    {
+      "index": 289,
+      "text_length": 34,
+      "speech_length": 420,
+      "total_length": 456
+    },
+    {
+      "index": 290,
+      "text_length": 42,
+      "speech_length": 532,
+      "total_length": 576
+    },
+    {
+      "index": 291,
+      "text_length": 51,
+      "speech_length": 539,
+      "total_length": 592
+    },
+    {
+      "index": 292,
+      "text_length": 35,
+      "speech_length": 308,
+      "total_length": 345
+    },
+    {
+      "index": 293,
+      "text_length": 54,
+      "speech_length": 651,
+      "total_length": 707
+    },
+    {
+      "index": 294,
+      "text_length": 60,
+      "speech_length": 756,
+      "total_length": 818
+    },
+    {
+      "index": 295,
+      "text_length": 50,
+      "speech_length": 623,
+      "total_length": 675
+    },
+    {
+      "index": 296,
+      "text_length": 42,
+      "speech_length": 469,
+      "total_length": 513
+    },
+    {
+      "index": 297,
+      "text_length": 58,
+      "speech_length": 658,
+      "total_length": 718
+    },
+    {
+      "index": 298,
+      "text_length": 36,
+      "speech_length": 392,
+      "total_length": 430
+    },
+    {
+      "index": 299,
+      "text_length": 41,
+      "speech_length": 427,
+      "total_length": 470
+    },
+    {
+      "index": 300,
+      "text_length": 40,
+      "speech_length": 427,
+      "total_length": 469
+    },
+    {
+      "index": 301,
+      "text_length": 29,
+      "speech_length": 259,
+      "total_length": 290
+    },
+    {
+      "index": 302,
+      "text_length": 70,
+      "speech_length": 861,
+      "total_length": 933
+    },
+    {
+      "index": 303,
+      "text_length": 36,
+      "speech_length": 357,
+      "total_length": 395
+    },
+    {
+      "index": 304,
+      "text_length": 62,
+      "speech_length": 728,
+      "total_length": 792
+    },
+    {
+      "index": 305,
+      "text_length": 39,
+      "speech_length": 434,
+      "total_length": 475
+    },
+    {
+      "index": 306,
+      "text_length": 54,
+      "speech_length": 791,
+      "total_length": 847
+    },
+    {
+      "index": 307,
+      "text_length": 51,
+      "speech_length": 616,
+      "total_length": 669
+    },
+    {
+      "index": 308,
+      "text_length": 53,
+      "speech_length": 707,
+      "total_length": 762
+    },
+    {
+      "index": 309,
+      "text_length": 45,
+      "speech_length": 427,
+      "total_length": 474
+    },
+    {
+      "index": 310,
+      "text_length": 46,
+      "speech_length": 602,
+      "total_length": 650
+    },
+    {
+      "index": 311,
+      "text_length": 46,
+      "speech_length": 546,
+      "total_length": 594
+    },
+    {
+      "index": 312,
+      "text_length": 55,
+      "speech_length": 630,
+      "total_length": 687
+    },
+    {
+      "index": 313,
+      "text_length": 56,
+      "speech_length": 658,
+      "total_length": 716
+    },
+    {
+      "index": 314,
+      "text_length": 49,
+      "speech_length": 588,
+      "total_length": 639
+    },
+    {
+      "index": 315,
+      "text_length": 43,
+      "speech_length": 420,
+      "total_length": 465
+    },
+    {
+      "index": 316,
+      "text_length": 50,
+      "speech_length": 616,
+      "total_length": 668
+    },
+    {
+      "index": 317,
+      "text_length": 42,
+      "speech_length": 448,
+      "total_length": 492
+    },
+    {
+      "index": 318,
+      "text_length": 45,
+      "speech_length": 420,
+      "total_length": 467
+    },
+    {
+      "index": 319,
+      "text_length": 61,
+      "speech_length": 833,
+      "total_length": 896
+    },
+    {
+      "index": 320,
+      "text_length": 53,
+      "speech_length": 595,
+      "total_length": 650
+    },
+    {
+      "index": 321,
+      "text_length": 50,
+      "speech_length": 693,
+      "total_length": 745
+    },
+    {
+      "index": 322,
+      "text_length": 40,
+      "speech_length": 455,
+      "total_length": 497
+    },
+    {
+      "index": 323,
+      "text_length": 56,
+      "speech_length": 721,
+      "total_length": 779
+    },
+    {
+      "index": 324,
+      "text_length": 94,
+      "speech_length": 1295,
+      "total_length": 1391
+    },
+    {
+      "index": 325,
+      "text_length": 46,
+      "speech_length": 511,
+      "total_length": 559
+    },
+    {
+      "index": 326,
+      "text_length": 38,
+      "speech_length": 350,
+      "total_length": 390
+    },
+    {
+      "index": 327,
+      "text_length": 57,
+      "speech_length": 679,
+      "total_length": 738
+    },
+    {
+      "index": 328,
+      "text_length": 72,
+      "speech_length": 931,
+      "total_length": 1005
+    },
+    {
+      "index": 329,
+      "text_length": 43,
+      "speech_length": 420,
+      "total_length": 465
+    },
+    {
+      "index": 330,
+      "text_length": 48,
+      "speech_length": 532,
+      "total_length": 582
+    },
+    {
+      "index": 331,
+      "text_length": 64,
+      "speech_length": 665,
+      "total_length": 731
+    },
+    {
+      "index": 332,
+      "text_length": 39,
+      "speech_length": 322,
+      "total_length": 363
+    },
+    {
+      "index": 333,
+      "text_length": 70,
+      "speech_length": 847,
+      "total_length": 919
+    },
+    {
+      "index": 334,
+      "text_length": 52,
+      "speech_length": 602,
+      "total_length": 656
+    },
+    {
+      "index": 335,
+      "text_length": 77,
+      "speech_length": 994,
+      "total_length": 1073
+    },
+    {
+      "index": 336,
+      "text_length": 57,
+      "speech_length": 630,
+      "total_length": 689
+    },
+    {
+      "index": 337,
+      "text_length": 40,
+      "speech_length": 378,
+      "total_length": 420
+    },
+    {
+      "index": 338,
+      "text_length": 38,
+      "speech_length": 322,
+      "total_length": 362
+    },
+    {
+      "index": 339,
+      "text_length": 52,
+      "speech_length": 637,
+      "total_length": 691
+    },
+    {
+      "index": 340,
+      "text_length": 69,
+      "speech_length": 840,
+      "total_length": 911
+    },
+    {
+      "index": 341,
+      "text_length": 48,
+      "speech_length": 462,
+      "total_length": 512
+    },
+    {
+      "index": 342,
+      "text_length": 62,
+      "speech_length": 868,
+      "total_length": 932
+    },
+    {
+      "index": 343,
+      "text_length": 53,
+      "speech_length": 581,
+      "total_length": 636
+    },
+    {
+      "index": 344,
+      "text_length": 33,
+      "speech_length": 385,
+      "total_length": 420
+    },
+    {
+      "index": 345,
+      "text_length": 33,
+      "speech_length": 343,
+      "total_length": 378
+    },
+    {
+      "index": 346,
+      "text_length": 34,
+      "speech_length": 371,
+      "total_length": 407
+    },
+    {
+      "index": 347,
+      "text_length": 53,
+      "speech_length": 637,
+      "total_length": 692
+    },
+    {
+      "index": 348,
+      "text_length": 39,
+      "speech_length": 294,
+      "total_length": 335
+    },
+    {
+      "index": 349,
+      "text_length": 43,
+      "speech_length": 392,
+      "total_length": 437
+    },
+    {
+      "index": 350,
+      "text_length": 37,
+      "speech_length": 392,
+      "total_length": 431
+    },
+    {
+      "index": 351,
+      "text_length": 33,
+      "speech_length": 329,
+      "total_length": 364
+    },
+    {
+      "index": 352,
+      "text_length": 53,
+      "speech_length": 574,
+      "total_length": 629
+    },
+    {
+      "index": 353,
+      "text_length": 34,
+      "speech_length": 301,
+      "total_length": 337
+    },
+    {
+      "index": 354,
+      "text_length": 35,
+      "speech_length": 308,
+      "total_length": 345
+    },
+    {
+      "index": 355,
+      "text_length": 45,
+      "speech_length": 532,
+      "total_length": 579
+    },
+    {
+      "index": 356,
+      "text_length": 60,
+      "speech_length": 686,
+      "total_length": 748
+    },
+    {
+      "index": 357,
+      "text_length": 49,
+      "speech_length": 567,
+      "total_length": 618
+    },
+    {
+      "index": 358,
+      "text_length": 61,
+      "speech_length": 735,
+      "total_length": 798
+    },
+    {
+      "index": 359,
+      "text_length": 32,
+      "speech_length": 301,
+      "total_length": 335
+    },
+    {
+      "index": 360,
+      "text_length": 58,
+      "speech_length": 686,
+      "total_length": 746
+    },
+    {
+      "index": 361,
+      "text_length": 29,
+      "speech_length": 238,
+      "total_length": 269
+    },
+    {
+      "index": 362,
+      "text_length": 85,
+      "speech_length": 1190,
+      "total_length": 1277
+    },
+    {
+      "index": 363,
+      "text_length": 45,
+      "speech_length": 483,
+      "total_length": 530
+    },
+    {
+      "index": 364,
+      "text_length": 46,
+      "speech_length": 546,
+      "total_length": 594
+    },
+    {
+      "index": 365,
+      "text_length": 46,
+      "speech_length": 497,
+      "total_length": 545
+    },
+    {
+      "index": 366,
+      "text_length": 75,
+      "speech_length": 812,
+      "total_length": 889
+    },
+    {
+      "index": 367,
+      "text_length": 47,
+      "speech_length": 581,
+      "total_length": 630
+    },
+    {
+      "index": 368,
+      "text_length": 53,
+      "speech_length": 567,
+      "total_length": 622
+    },
+    {
+      "index": 369,
+      "text_length": 37,
+      "speech_length": 448,
+      "total_length": 487
+    },
+    {
+      "index": 370,
+      "text_length": 70,
+      "speech_length": 938,
+      "total_length": 1010
+    },
+    {
+      "index": 371,
+      "text_length": 37,
+      "speech_length": 378,
+      "total_length": 417
+    },
+    {
+      "index": 372,
+      "text_length": 77,
+      "speech_length": 1008,
+      "total_length": 1087
+    },
+    {
+      "index": 373,
+      "text_length": 35,
+      "speech_length": 322,
+      "total_length": 359
+    },
+    {
+      "index": 374,
+      "text_length": 50,
+      "speech_length": 637,
+      "total_length": 689
+    },
+    {
+      "index": 375,
+      "text_length": 39,
+      "speech_length": 420,
+      "total_length": 461
+    },
+    {
+      "index": 376,
+      "text_length": 58,
+      "speech_length": 693,
+      "total_length": 753
+    },
+    {
+      "index": 377,
+      "text_length": 31,
+      "speech_length": 308,
+      "total_length": 341
+    },
+    {
+      "index": 378,
+      "text_length": 43,
+      "speech_length": 399,
+      "total_length": 444
+    },
+    {
+      "index": 379,
+      "text_length": 40,
+      "speech_length": 371,
+      "total_length": 413
+    },
+    {
+      "index": 380,
+      "text_length": 60,
+      "speech_length": 658,
+      "total_length": 720
+    },
+    {
+      "index": 381,
+      "text_length": 75,
+      "speech_length": 924,
+      "total_length": 1001
+    },
+    {
+      "index": 382,
+      "text_length": 33,
+      "speech_length": 357,
+      "total_length": 392
+    },
+    {
+      "index": 383,
+      "text_length": 48,
+      "speech_length": 532,
+      "total_length": 582
+    },
+    {
+      "index": 384,
+      "text_length": 69,
+      "speech_length": 812,
+      "total_length": 883
+    },
+    {
+      "index": 385,
+      "text_length": 54,
+      "speech_length": 658,
+      "total_length": 714
+    },
+    {
+      "index": 386,
+      "text_length": 55,
+      "speech_length": 637,
+      "total_length": 694
+    },
+    {
+      "index": 387,
+      "text_length": 50,
+      "speech_length": 602,
+      "total_length": 654
+    },
+    {
+      "index": 388,
+      "text_length": 33,
+      "speech_length": 364,
+      "total_length": 399
+    },
+    {
+      "index": 389,
+      "text_length": 72,
+      "speech_length": 910,
+      "total_length": 984
+    },
+    {
+      "index": 390,
+      "text_length": 36,
+      "speech_length": 308,
+      "total_length": 346
+    },
+    {
+      "index": 391,
+      "text_length": 29,
+      "speech_length": 294,
+      "total_length": 325
+    },
+    {
+      "index": 392,
+      "text_length": 37,
+      "speech_length": 343,
+      "total_length": 382
+    },
+    {
+      "index": 393,
+      "text_length": 56,
+      "speech_length": 637,
+      "total_length": 695
+    },
+    {
+      "index": 394,
+      "text_length": 43,
+      "speech_length": 441,
+      "total_length": 486
+    },
+    {
+      "index": 395,
+      "text_length": 59,
+      "speech_length": 707,
+      "total_length": 768
+    },
+    {
+      "index": 396,
+      "text_length": 54,
+      "speech_length": 588,
+      "total_length": 644
+    },
+    {
+      "index": 397,
+      "text_length": 63,
+      "speech_length": 770,
+      "total_length": 835
+    },
+    {
+      "index": 398,
+      "text_length": 61,
+      "speech_length": 707,
+      "total_length": 770
+    },
+    {
+      "index": 399,
+      "text_length": 46,
+      "speech_length": 483,
+      "total_length": 531
+    },
+    {
+      "index": 400,
+      "text_length": 53,
+      "speech_length": 469,
+      "total_length": 524
+    },
+    {
+      "index": 401,
+      "text_length": 70,
+      "speech_length": 875,
+      "total_length": 947
+    },
+    {
+      "index": 402,
+      "text_length": 37,
+      "speech_length": 322,
+      "total_length": 361
+    },
+    {
+      "index": 403,
+      "text_length": 54,
+      "speech_length": 602,
+      "total_length": 658
+    },
+    {
+      "index": 404,
+      "text_length": 43,
+      "speech_length": 413,
+      "total_length": 458
+    },
+    {
+      "index": 405,
+      "text_length": 47,
+      "speech_length": 511,
+      "total_length": 560
+    },
+    {
+      "index": 406,
+      "text_length": 46,
+      "speech_length": 455,
+      "total_length": 503
+    },
+    {
+      "index": 407,
+      "text_length": 65,
+      "speech_length": 854,
+      "total_length": 921
+    },
+    {
+      "index": 408,
+      "text_length": 40,
+      "speech_length": 329,
+      "total_length": 371
+    },
+    {
+      "index": 409,
+      "text_length": 47,
+      "speech_length": 490,
+      "total_length": 539
+    },
+    {
+      "index": 410,
+      "text_length": 66,
+      "speech_length": 889,
+      "total_length": 957
+    },
+    {
+      "index": 411,
+      "text_length": 52,
+      "speech_length": 616,
+      "total_length": 670
+    },
+    {
+      "index": 412,
+      "text_length": 35,
+      "speech_length": 350,
+      "total_length": 387
+    },
+    {
+      "index": 413,
+      "text_length": 41,
+      "speech_length": 406,
+      "total_length": 449
+    },
+    {
+      "index": 414,
+      "text_length": 40,
+      "speech_length": 392,
+      "total_length": 434
+    },
+    {
+      "index": 415,
+      "text_length": 54,
+      "speech_length": 609,
+      "total_length": 665
+    },
+    {
+      "index": 416,
+      "text_length": 48,
+      "speech_length": 490,
+      "total_length": 540
+    },
+    {
+      "index": 417,
+      "text_length": 54,
+      "speech_length": 651,
+      "total_length": 707
+    },
+    {
+      "index": 418,
+      "text_length": 41,
+      "speech_length": 476,
+      "total_length": 519
+    },
+    {
+      "index": 419,
+      "text_length": 32,
+      "speech_length": 329,
+      "total_length": 363
+    },
+    {
+      "index": 420,
+      "text_length": 72,
+      "speech_length": 959,
+      "total_length": 1033
+    },
+    {
+      "index": 421,
+      "text_length": 59,
+      "speech_length": 616,
+      "total_length": 677
+    },
+    {
+      "index": 422,
+      "text_length": 45,
+      "speech_length": 427,
+      "total_length": 474
+    },
+    {
+      "index": 423,
+      "text_length": 69,
+      "speech_length": 791,
+      "total_length": 862
+    },
+    {
+      "index": 424,
+      "text_length": 47,
+      "speech_length": 427,
+      "total_length": 476
+    },
+    {
+      "index": 425,
+      "text_length": 70,
+      "speech_length": 868,
+      "total_length": 940
+    },
+    {
+      "index": 426,
+      "text_length": 59,
+      "speech_length": 700,
+      "total_length": 761
+    },
+    {
+      "index": 427,
+      "text_length": 52,
+      "speech_length": 595,
+      "total_length": 649
+    },
+    {
+      "index": 428,
+      "text_length": 50,
+      "speech_length": 539,
+      "total_length": 591
+    },
+    {
+      "index": 429,
+      "text_length": 52,
+      "speech_length": 602,
+      "total_length": 656
+    },
+    {
+      "index": 430,
+      "text_length": 45,
+      "speech_length": 441,
+      "total_length": 488
+    },
+    {
+      "index": 431,
+      "text_length": 55,
+      "speech_length": 644,
+      "total_length": 701
+    },
+    {
+      "index": 432,
+      "text_length": 38,
+      "speech_length": 413,
+      "total_length": 453
+    },
+    {
+      "index": 433,
+      "text_length": 39,
+      "speech_length": 406,
+      "total_length": 447
+    },
+    {
+      "index": 434,
+      "text_length": 48,
+      "speech_length": 532,
+      "total_length": 582
+    },
+    {
+      "index": 435,
+      "text_length": 50,
+      "speech_length": 539,
+      "total_length": 591
+    },
+    {
+      "index": 436,
+      "text_length": 52,
+      "speech_length": 651,
+      "total_length": 705
+    },
+    {
+      "index": 437,
+      "text_length": 42,
+      "speech_length": 413,
+      "total_length": 457
+    },
+    {
+      "index": 438,
+      "text_length": 74,
+      "speech_length": 945,
+      "total_length": 1021
+    },
+    {
+      "index": 439,
+      "text_length": 50,
+      "speech_length": 581,
+      "total_length": 633
+    },
+    {
+      "index": 440,
+      "text_length": 39,
+      "speech_length": 378,
+      "total_length": 419
+    },
+    {
+      "index": 441,
+      "text_length": 58,
+      "speech_length": 735,
+      "total_length": 795
+    },
+    {
+      "index": 442,
+      "text_length": 41,
+      "speech_length": 406,
+      "total_length": 449
+    },
+    {
+      "index": 443,
+      "text_length": 51,
+      "speech_length": 602,
+      "total_length": 655
+    },
+    {
+      "index": 444,
+      "text_length": 39,
+      "speech_length": 420,
+      "total_length": 461
+    },
+    {
+      "index": 445,
+      "text_length": 66,
+      "speech_length": 693,
+      "total_length": 761
+    },
+    {
+      "index": 446,
+      "text_length": 35,
+      "speech_length": 315,
+      "total_length": 352
+    },
+    {
+      "index": 447,
+      "text_length": 43,
+      "speech_length": 504,
+      "total_length": 549
+    },
+    {
+      "index": 448,
+      "text_length": 58,
+      "speech_length": 707,
+      "total_length": 767
+    },
+    {
+      "index": 449,
+      "text_length": 35,
+      "speech_length": 329,
+      "total_length": 366
+    },
+    {
+      "index": 450,
+      "text_length": 41,
+      "speech_length": 462,
+      "total_length": 505
+    },
+    {
+      "index": 451,
+      "text_length": 58,
+      "speech_length": 651,
+      "total_length": 711
+    },
+    {
+      "index": 452,
+      "text_length": 54,
+      "speech_length": 616,
+      "total_length": 672
+    },
+    {
+      "index": 453,
+      "text_length": 47,
+      "speech_length": 553,
+      "total_length": 602
+    },
+    {
+      "index": 454,
+      "text_length": 42,
+      "speech_length": 392,
+      "total_length": 436
+    },
+    {
+      "index": 455,
+      "text_length": 56,
+      "speech_length": 630,
+      "total_length": 688
+    },
+    {
+      "index": 456,
+      "text_length": 57,
+      "speech_length": 784,
+      "total_length": 843
+    },
+    {
+      "index": 457,
+      "text_length": 72,
+      "speech_length": 959,
+      "total_length": 1033
+    },
+    {
+      "index": 458,
+      "text_length": 65,
+      "speech_length": 763,
+      "total_length": 830
+    },
+    {
+      "index": 459,
+      "text_length": 46,
+      "speech_length": 413,
+      "total_length": 461
+    },
+    {
+      "index": 460,
+      "text_length": 72,
+      "speech_length": 854,
+      "total_length": 928
+    },
+    {
+      "index": 461,
+      "text_length": 67,
+      "speech_length": 791,
+      "total_length": 860
+    },
+    {
+      "index": 462,
+      "text_length": 51,
+      "speech_length": 469,
+      "total_length": 522
+    },
+    {
+      "index": 463,
+      "text_length": 50,
+      "speech_length": 497,
+      "total_length": 549
+    },
+    {
+      "index": 464,
+      "text_length": 59,
+      "speech_length": 763,
+      "total_length": 824
+    },
+    {
+      "index": 465,
+      "text_length": 42,
+      "speech_length": 378,
+      "total_length": 422
+    },
+    {
+      "index": 466,
+      "text_length": 62,
+      "speech_length": 854,
+      "total_length": 918
+    },
+    {
+      "index": 467,
+      "text_length": 42,
+      "speech_length": 322,
+      "total_length": 366
+    },
+    {
+      "index": 468,
+      "text_length": 51,
+      "speech_length": 553,
+      "total_length": 606
+    },
+    {
+      "index": 469,
+      "text_length": 64,
+      "speech_length": 749,
+      "total_length": 815
+    },
+    {
+      "index": 470,
+      "text_length": 35,
+      "speech_length": 343,
+      "total_length": 380
+    },
+    {
+      "index": 471,
+      "text_length": 47,
+      "speech_length": 469,
+      "total_length": 518
+    },
+    {
+      "index": 472,
+      "text_length": 64,
+      "speech_length": 749,
+      "total_length": 815
+    },
+    {
+      "index": 473,
+      "text_length": 43,
+      "speech_length": 427,
+      "total_length": 472
+    },
+    {
+      "index": 474,
+      "text_length": 72,
+      "speech_length": 826,
+      "total_length": 900
+    },
+    {
+      "index": 475,
+      "text_length": 68,
+      "speech_length": 959,
+      "total_length": 1029
+    },
+    {
+      "index": 476,
+      "text_length": 52,
+      "speech_length": 644,
+      "total_length": 698
+    },
+    {
+      "index": 477,
+      "text_length": 41,
+      "speech_length": 441,
+      "total_length": 484
+    },
+    {
+      "index": 478,
+      "text_length": 76,
+      "speech_length": 1001,
+      "total_length": 1079
+    },
+    {
+      "index": 479,
+      "text_length": 54,
+      "speech_length": 609,
+      "total_length": 665
+    },
+    {
+      "index": 480,
+      "text_length": 50,
+      "speech_length": 553,
+      "total_length": 605
+    },
+    {
+      "index": 481,
+      "text_length": 50,
+      "speech_length": 609,
+      "total_length": 661
+    },
+    {
+      "index": 482,
+      "text_length": 99,
+      "speech_length": 1435,
+      "total_length": 1536
+    },
+    {
+      "index": 483,
+      "text_length": 61,
+      "speech_length": 833,
+      "total_length": 896
+    },
+    {
+      "index": 484,
+      "text_length": 35,
+      "speech_length": 357,
+      "total_length": 394
+    },
+    {
+      "index": 485,
+      "text_length": 62,
+      "speech_length": 700,
+      "total_length": 764
+    },
+    {
+      "index": 486,
+      "text_length": 61,
+      "speech_length": 784,
+      "total_length": 847
+    },
+    {
+      "index": 487,
+      "text_length": 65,
+      "speech_length": 826,
+      "total_length": 893
+    },
+    {
+      "index": 488,
+      "text_length": 53,
+      "speech_length": 651,
+      "total_length": 706
+    },
+    {
+      "index": 489,
+      "text_length": 60,
+      "speech_length": 791,
+      "total_length": 853
+    },
+    {
+      "index": 490,
+      "text_length": 44,
+      "speech_length": 469,
+      "total_length": 515
+    },
+    {
+      "index": 491,
+      "text_length": 44,
+      "speech_length": 441,
+      "total_length": 487
+    },
+    {
+      "index": 492,
+      "text_length": 60,
+      "speech_length": 742,
+      "total_length": 804
+    },
+    {
+      "index": 493,
+      "text_length": 78,
+      "speech_length": 924,
+      "total_length": 1004
+    },
+    {
+      "index": 494,
+      "text_length": 48,
+      "speech_length": 525,
+      "total_length": 575
+    },
+    {
+      "index": 495,
+      "text_length": 72,
+      "speech_length": 903,
+      "total_length": 977
+    },
+    {
+      "index": 496,
+      "text_length": 53,
+      "speech_length": 588,
+      "total_length": 643
+    },
+    {
+      "index": 497,
+      "text_length": 49,
+      "speech_length": 525,
+      "total_length": 576
+    },
+    {
+      "index": 498,
+      "text_length": 39,
+      "speech_length": 392,
+      "total_length": 433
+    },
+    {
+      "index": 499,
+      "text_length": 63,
+      "speech_length": 721,
+      "total_length": 786
+    }
+  ],
+  "recommended_candidate_without_observed_truncation": 1536
+}
