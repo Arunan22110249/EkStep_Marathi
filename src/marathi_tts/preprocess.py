@@ -583,8 +583,8 @@ class BodhanTokenSerializer:
     Serialize SNAC codes to Bodhan audio token IDs.
 
     IMPORTANT:
-    Bodhan uses one global audio-token base. There is no additional
-    position-dependent +4096 offset.
+    Bodhan uses position-dependent audio-token offsets. Each serialized
+    position adds position * CODEBOOK_SIZE to the global audio-token base.
     """
 
     BASE_AUDIO_TOKEN = 128266
@@ -611,17 +611,9 @@ class BodhanTokenSerializer:
                 c2[4*i+3],
             ]
 
-        Each value receives the same global BASE_AUDIO_TOKEN.
+        Each value receives a position-dependent offset:
 
-        In other words:
-
-            token = 128266 + SNAC_code
-
-        There is NO:
-
-            128266 + position * 4096 + SNAC_code
-
-        position-dependent offset.
+            token = BASE_AUDIO_TOKEN + position * CODEBOOK_SIZE + raw_code
 
         This ordering is the inverse of Bodhan's official
         ids_to_codes() reconstruction.
@@ -687,28 +679,35 @@ class BodhanTokenSerializer:
                 [
                     # Codebook 0
                     BodhanTokenSerializer.BASE_AUDIO_TOKEN
+                    + 0 * BodhanTokenSerializer.CODEBOOK_SIZE
                     + int(c0[i]),
 
                     # Codebook 1, first half
                     BodhanTokenSerializer.BASE_AUDIO_TOKEN
+                    + 1 * BodhanTokenSerializer.CODEBOOK_SIZE
                     + int(c1[2 * i]),
 
                     # Codebook 2, first half
                     BodhanTokenSerializer.BASE_AUDIO_TOKEN
+                    + 2 * BodhanTokenSerializer.CODEBOOK_SIZE
                     + int(c2[4 * i]),
 
                     BodhanTokenSerializer.BASE_AUDIO_TOKEN
+                    + 3 * BodhanTokenSerializer.CODEBOOK_SIZE
                     + int(c2[4 * i + 1]),
 
                     # Codebook 1, second half
                     BodhanTokenSerializer.BASE_AUDIO_TOKEN
+                    + 4 * BodhanTokenSerializer.CODEBOOK_SIZE
                     + int(c1[2 * i + 1]),
 
                     # Codebook 2, second half
                     BodhanTokenSerializer.BASE_AUDIO_TOKEN
+                    + 5 * BodhanTokenSerializer.CODEBOOK_SIZE
                     + int(c2[4 * i + 2]),
 
                     BodhanTokenSerializer.BASE_AUDIO_TOKEN
+                    + 6 * BodhanTokenSerializer.CODEBOOK_SIZE
                     + int(c2[4 * i + 3]),
                 ]
             )
